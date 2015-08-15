@@ -12,6 +12,7 @@ GameObject:
   - 124: {fileID: 12412220}
   - 92: {fileID: 9212220}
   - 81: {fileID: 8112220}
+  - 45: {fileID: 4595682}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -28,10 +29,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 412442}
   - 137: {fileID: 13712442}
-  - 64: {fileID: 6443804}
+  - 65: {fileID: 6516430}
+  - 54: {fileID: 5416430}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,7 +936,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.29999995, z: -39.0200005}
+  m_LocalPosition: {x: 0, y: .670000017, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 412446}
@@ -1638,19 +1640,41 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!64 &6443804
-MeshCollider:
+--- !u!45 &4595682
+Skybox:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112220}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 16522f49031ff414abdf1f83f1b6a36c, type: 2}
+--- !u!54 &5416430
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112442}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6516430
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112442}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300006, guid: 417a287abb2cab94889f1f1ddd91f928, type: 3}
+  m_Size: {x: .535553634, y: .141056165, z: 1.95000005}
+  m_Center: {x: -.290014178, y: -.00552567746, z: .709999979}
 --- !u!81 &8112220
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1692,6 +1716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinSpeed: 100
+  sword: {fileID: 6516430}
 --- !u!124 &12412220
 Behaviour:
   m_ObjectHideFlags: 1
@@ -1854,9 +1879,9 @@ CharacterController:
   m_GameObject: {fileID: 112450}
   serializedVersion: 2
   m_Height: 2.63000011
-  m_Radius: .5
-  m_SlopeLimit: 45
-  m_StepOffset: .300000012
+  m_Radius: .569999993
+  m_SlopeLimit: 30
+  m_StepOffset: .200000003
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1.21000004, z: 0}
